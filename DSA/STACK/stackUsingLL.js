@@ -1,3 +1,4 @@
+
 class Node{
     constructor(value){
         this.value=value
@@ -38,7 +39,6 @@ class Stack{
             curr=curr.next 
         }
     }
-
 }
 
 let stack = new Stack()

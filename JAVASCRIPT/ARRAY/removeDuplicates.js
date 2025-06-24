@@ -1,11 +1,11 @@
-// using Array methods Filter,Indexof,Last indexof
+// using Array methods Filter,Indexof,Last indexof. Where Removes  the elements which have a copy
 
 function RemoveDuplicates(arr){
     return arr.filter((x)=> arr.indexOf(x)==arr.lastIndexOf(x))
 }
 console.log(RemoveDuplicates([1,2,3,4,5,6,3,4]));
 
-//Remove Duplicates aka Find Unique only using Freq and using additional array
+//Remove Duplicates aka Find Unique only using Freq and using additional array. Remove elements with copy, only shows elements with one occurence
 function RemoveDup(arr){
     let freq={}
     let res=[]

@@ -1,3 +1,5 @@
+//Unique in an array which means only one copy of each item, skipping duplicate elements
+
 function Unique(arr){
     let res=[]
     let freq={}
@@ -6,9 +8,7 @@ function Unique(arr){
         freq[i]=(freq[i] || 0) +1
     }
     for(let i in freq){
-        if(freq[i]==1){
-            res[index++]=Number(i)
-        }
+        res[index++]=Number(i)
     }
     return res
 }

@@ -1,3 +1,4 @@
+
 function SumOfOdddAndEven(arr){
     let oddSum=0
     let evenSum=0
@@ -14,3 +15,5 @@ function SumOfOdddAndEven(arr){
     return {evenSum,oddSum}
 }
 console.log(SumOfOdddAndEven([1,2,3,4]));
+
+

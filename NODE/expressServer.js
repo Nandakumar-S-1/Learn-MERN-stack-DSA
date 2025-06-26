@@ -11,6 +11,6 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(`----------- http://localhost:${port}`);
+    console.log(`server is running in http://localhost:${port}`);
     
 })

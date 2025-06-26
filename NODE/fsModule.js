@@ -77,11 +77,12 @@ const fs=require('fs')
 // createFiles()
 
 /////////////////write current date  and time
-// const todaysTime = new Date().toDateString()
 
-// fs.writeFile('file1.txt',todaysTime,(err)=>{
-//     if(err){
-//         console.log(err);
-//     }console.log('write is succesfull');
-// })
 
+const todaysTime = new Date().toDateString()
+
+fs.writeFile('file1.txt',todaysTime,(err)=>{
+    if(err){
+        console.log(err);
+    }console.log('write is succesfull');
+})

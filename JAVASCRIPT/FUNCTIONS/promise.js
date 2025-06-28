@@ -28,20 +28,37 @@
 
 ///////////////
 
-let arr=[4,2,0]
-const prom = new Promise((res,rej)=>{
-    setTimeout(()=>{
-        for(let i=0;i<arr.length;i++){
-        if(arr[i]%2!=0){
-            res(true)
-            return
-        }else{
-            rej(false)
-            return
-        }
+// let arr=[4,2,0]
+// const prom = new Promise((res,rej)=>{
+//     setTimeout(()=>{
+//         for(let i=0;i<arr.length;i++){
+//         if(arr[i]%2!=0){
+//             res(true)
+//             return
+//         }else{
+//             rej(false)
+//             return
+//         }
+//     }
+//     },2000)
+// })
+
+// .then(res=>console.log(res))
+// .catch(rej=>console.log(rej))
+
+///////////////////////////
+
+const myPromise =new Promise((resolve,reject)=>{
+    const mark=8
+    if(mark>10){
+        resolve('passed')
+    }else{
+        reject('failed')
     }
-    },2000)
+})
+myPromise.then((success)=>{
+    console.log(success)    
+}).catch((err)=>{
+    console.log(err)
 })
 
-.then(res=>console.log(res))
-.catch(rej=>console.log(rej))

@@ -1,11 +1,4 @@
-const http=require('http')
-const port=3001
-
-let server=http.createServer((req,res)=>{
-    res.end('Server is running')
-})
-
-server.listen(port,()=>{
-    console.log(`http://localhost:${port}`);
-    
-})
+let a=undefined
+let  b=1
+let result = a ?? b;
+console.log(result);

@@ -1,0 +1,19 @@
+class Graph{
+    constructor(){
+        this.graph={}
+    }
+    addV(v){
+        if(!this.graph[v]){
+            this.graph[v]=[]
+        }
+    }
+    addE(v,w){
+        if(!this.graph[v]){
+            this.addV(v)
+        }if(!this.graph[w]){
+            this.addV(w)
+        }
+        this.graph[v].push(w)
+        this.graph[w].push(v)
+    }
+}

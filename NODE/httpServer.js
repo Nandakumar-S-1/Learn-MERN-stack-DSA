@@ -3,7 +3,7 @@ const port =3600
 
 // const server = http.createServer((req,res)=>{
 //     res.statusCode =200
-//     res.setHeader('content-type','text/plain')
+    // res.setHeader('content-type','text/plain')
 //     res.end('server with http')
 // })
 

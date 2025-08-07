@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "nodemon": "^3.1.10"
   }
 }

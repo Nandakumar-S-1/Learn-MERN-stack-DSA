@@ -21,7 +21,9 @@ class Trie{
         }
         node.isEnd=true
     }
-    search(word){
+
+
+        search(word){
         let node=this.root
         for(let char of word){
             if(!node.child[char]){
@@ -40,5 +42,8 @@ class Trie{
             node=node.child[char]
         }
         return true
+    }
+    autoCompleate(prefix){
+        
     }
 }

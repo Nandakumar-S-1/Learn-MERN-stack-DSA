@@ -12,3 +12,25 @@ obj.b();
 obj.c();       
 obj.d.e();     
 obj.d.f();     
+
+
+
+const object = {
+    a: this, //  in global scope
+    b: () => {
+        return this; // this in an arrow function
+    },
+    c: function() {
+        return this; // this in a regular function
+    },
+    d: {
+        e: function() {
+            return this; // this in a nested object method
+        }
+    }
+};
+
+console.log(object.a);
+console.log(object.b());
+console.log(object.c());
+console.log(object.d.e());

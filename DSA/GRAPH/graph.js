@@ -34,4 +34,40 @@ class Graph{
         }
         return res
     }
+    dfs(start){
+        let stack=[start]
+        let visited=[start]
+        let res=[]
+        while(stack.length){
+            let curr=stack.pop()
+            res.push(curr)
+            this.graph[curr].forEach(n=>{
+                if(!visited.includes(n)){
+                    stack.push(n)
+                    visited.push(n)
+                }
+            })
+        }
+        return res
+    }
+    shortestPath(start,end){
+        let queue=[[start]]
+        let visited=[start]
+        while(queue.length){
+            let path=queue.shift()
+            let curr=path[path.length-1]
+
+            if(curr==end){
+                return path
+            }
+
+            this.graph[curr].forEach(n=>{
+                if(!visited.includes(n)){
+                    visited.push(n)
+                    queue.push([...path,n])
+                }
+            })
+        }
+        return null
+    }
 }

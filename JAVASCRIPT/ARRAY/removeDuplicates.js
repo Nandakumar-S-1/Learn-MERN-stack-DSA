@@ -22,3 +22,20 @@ function RemoveDup(arr){
     return res
 }
 console.log(RemoveDup([1,2,3,4,2,3,5,6,6]));
+
+
+
+///////////////////////////////
+function removeDupArray(arr) {
+  let seen = {};
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!seen[arr[i]]) {
+      seen[arr[i]] = true;
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+console.log(removeDupArray([1,2,2,3,4,4,5])); // [1,2,3,4,5]

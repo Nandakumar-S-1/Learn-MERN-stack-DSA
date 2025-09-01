@@ -1,11 +1,8 @@
-function customReduce(arr,cb,init){
-    let acc=init !==undefined ? init : arr[0]
-    let start = init !==undefined ? 0 : 1
+function CustomReduce(arr,cb,init){
+    let acc=init
     for(let i=0;i<arr.length;i++){
-        acc=cb(acc,arr[i],i,arr)
+        acc = cb(acc,arr[i],i)
     }
     return acc
 }
-
-let sum=customReduce([1,2,4,3,5],(acc,curr)=>acc+curr,0)
-console.log(sum)
+console.log(CustomReduce([1,2,3,4,5],(a,b)=>a+b,0));

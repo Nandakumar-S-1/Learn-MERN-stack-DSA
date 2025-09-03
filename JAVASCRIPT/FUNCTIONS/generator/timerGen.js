@@ -6,7 +6,7 @@ function* countGen(){
     }
 }
 
-const gen = countGen()
+const gen = countGen() 
 let interval = setInterval(()=>{
     let next = gen.next()
     if(next.done)clearInterval(interval)

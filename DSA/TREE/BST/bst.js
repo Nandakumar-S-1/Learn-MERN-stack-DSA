@@ -94,6 +94,17 @@ class BST{
         }
     }
 }
+function FindLeaf(root,res=[]){
+    if(!root){
+        return res
+    }
+    if(!root.left && !root.right){
+        res.push(root.value)
+    }
+    FindLeaf(root.left,res)
+    FindLeaf(root.right,res)
+    return res
+}
 
 let bst= new BST()
 bst.insert(7)

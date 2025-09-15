@@ -3,6 +3,6 @@ function ADD(a){
         return a+b
     }
 }
-let fst = ADD(5)
-let sec = fst(7)
-console.log(sec);
+
+console.log(ADD(3)(2));
+

@@ -73,5 +73,35 @@ class LL{
         }
         return -1
     }
-    
+    sort() {
+    if (this.size <= 1) return;
+
+    let swapped;
+    do {
+        swapped = false;
+        let curr = this.head;
+
+        while (curr.next) {
+            if (curr.val > curr.next.val) {
+                let temp = curr.val;
+                curr.val = curr.next.val;
+                curr.next.val = temp;
+                swapped = true;
+            }
+            curr = curr.next;
+        }
+    } while (swapped);
 }
+
+}
+
+
+
+
+let list = new LL();
+list.append(5);
+list.append(1);
+list.append(3);
+console.log(list.print()); 
+list.sort();
+console.log(list.print()); 

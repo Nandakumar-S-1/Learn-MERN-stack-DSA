@@ -106,6 +106,17 @@ function FindLeaf(root,res=[]){
     return res
 }
 
+
+function MaxDepth(root){
+    if(!root){
+        return 0
+    }
+    const leftD=MaxDepth(root.left)
+    const rightD=MaxDepth(root.right)
+
+    return Math.max(leftD,rightD)+1
+}
+
 let bst= new BST()
 bst.insert(7)
 bst.insert(2)

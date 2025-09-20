@@ -6,3 +6,12 @@ function A(){
     }
 }
 A()
+
+
+let i=10
+setTimeout(()=>{
+    while(i>=1){
+        console.log(i)
+        i--
+    }
+},1000)

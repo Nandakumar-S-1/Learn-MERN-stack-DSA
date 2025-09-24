@@ -1,32 +1,37 @@
-const fs = require('fs');
+const obj = {
+  newObj: {
+    obj2: {
+      obj5: {
+        one: 1,
+      },
+    },
+  },
+  obj3: {
+    obj4: {
+      two: 2,
+    },
+  },
+};
 
-console.log('Start');
+// {
+//     'newObj.obj2.obj5.one': 1,
+//     'obj3.obj4.two': 2,
+// }
 
-setTimeout(() => {
-  console.log('SetTime out timed');
-}, 5000);
+function flat(object){
+  const res={}
+  function reccur(obj,pref){
+    for(let key in obj){
+      if(typeof obj[key]==='object' && obj[key] !==null){
+        reccur(obj[key],`${pref}${key}.`)
+      }else{
+        res[`${pref}${key}`]=obj[key]
+      }
+    }
+  }
+  reccur(object,'')
+  return res
+}
 
-let val = setInterval(() => {
-  console.log('set interval');
-}, 1000);
-
-setTimeout(() => {
-  console.log('set time out 1 sec');
-}, 1000);
-
-setImmediate(() => {
-  console.log('Immediate');
-});
-
-fs.readFile(__filename, 'utf8', () => {
-  console.log('File read callback (I/O)');
-});
-
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(res => res.json())
-  .then(() => {
-    console.log('Fetch cb');
-  })
-  .catch(err => console.error('Fetch failed:', err));
-
-console.log('end');
+const result = flat(obj);
+console.log(result);

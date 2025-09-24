@@ -18,6 +18,20 @@ const obj = {
 //     'obj3.obj4.two': 2,
 // }
 
-for(let i in obj){
-    // if()
+function flat(object){
+  const res={}
+  function reccur(obj,pref){
+    for(let key in obj){
+      if(typeof obj[key]==='object' && obj[key] !==null){
+        reccur(obj[key],`${pref}${key}.`)
+      }else{
+        res[`${pref}${key}`]=obj[key]
+      }
+    }
+  }
+  reccur(object,'')
+  return res
 }
+
+const result = flattenObject(obj);
+console.log(result);

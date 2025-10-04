@@ -6,7 +6,7 @@ class Node{
 }
 class LL{
     constructor(){
-        this.head=null
+        this.head=null  
         this.size=0
     }
     isEmpty(){

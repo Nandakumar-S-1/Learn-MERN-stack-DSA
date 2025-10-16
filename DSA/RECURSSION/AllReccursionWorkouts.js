@@ -183,3 +183,57 @@ function Sorted(arr,i=0){
 }
 console.log(Sorted([1,2,3,4,5,6]))
 
+
+// Binary Search
+function BS(arr,target){
+    return search(arr,target,0,arr.length-1)
+}
+function search(arr,target,left,right){
+    if(left>right){
+        return -1
+    }
+    let mid=Math.floor((left+right)/2)
+    if(target===arr[mid]){
+        return mid
+    }else if(target<arr[mid]){
+        return search(arr,target,left,right-1)
+    }else{
+        return search(arr,target,left+1,right)
+    }
+}
+
+console.log(BS([1,2,3,4,5,6,7,8],6))
+
+
+// Find GCD of Two Numbers
+function GCD(a,b){
+    if(b==0){
+        return a
+    }
+    return GCD(b,a%b)
+}
+console.log(GCD(12,7))
+
+
+// Find Index of Target
+function Target(arr,target,i=0){
+    if(i==arr.length){
+        return -1
+    }
+    if(arr[i]===target){
+        return i
+    }
+    return Target(arr,target,i+1)
+}
+console.log(Target([1,3,5,2,6,4,6],4))
+
+
+// Capitalize Words
+function Capitalize(arr,res=[],ind=0){
+     if(arr.length===ind){
+         return  res
+     }
+     res.push(arr[ind].toUpperCase())
+     return Capitalize(arr,res,ind+1)
+}
+console.log(Capitalize(['a','bc','def']))

@@ -15,3 +15,21 @@ function SumOfDigits(n){
     return parseInt(str[0])+SumOfDigits(str.slice(1))
 }
 console.log(SumOfDigits(12345));
+
+
+
+function SumOfDigit(n,i=0){
+    
+    let str=n.toString()
+
+    if(i==str.length){
+        return 0
+    }
+
+    let curr=parseInt(str[i])
+    let sum=SumOfDigit(n,i+1)
+
+    return curr+sum
+}
+
+console.log(SumOfDigit(102))

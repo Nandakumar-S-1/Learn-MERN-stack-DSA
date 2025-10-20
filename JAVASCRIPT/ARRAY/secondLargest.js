@@ -34,6 +34,7 @@ function SecondLargeWithoutSort(arr){
             second=arr[i]
         }
     }
+    
     return second
 }
 console.log(SecondLargeWithoutSort([4,1,6,33,7,12]));

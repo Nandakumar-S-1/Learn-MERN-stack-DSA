@@ -75,6 +75,37 @@ class Trie{
         }
         return longest
     }
+    countWordsWithPrefix(prefix){
+        let node = this.root
+        for(let char of prefix){
+            if(!node.child[char]){
+                return 0
+            }
+            node=node.child[char]
+        }
+        let count=0
+        const dfs = (n)=>{
+            if(n.isEnd){
+                count++
+            }
+            for(let char in n.child){
+                dfs(n.child[char])
+            }
+        }
+        dfs(node)
+        return count
+    }
+    countTotalWOrds(){
+        let count=0
+        const dfs = (node)=>{
+            if(node.isEnd) count++
+            for(let char in node.child){
+                dfs(node.child[char])
+            }
+        }
+        dfs(this.root)
+        return count
+    }
 }
 
 let trie=new Trie()
@@ -93,3 +124,5 @@ console.log(trie.search("dev"))
 console.log(trie.starsWith("di"))
 
 console.log(trie.longestPref("ashikasivan"))
+console.log(trie.countWordsWithPrefix('as'));
+console.log(trie.countTotalWOrds())

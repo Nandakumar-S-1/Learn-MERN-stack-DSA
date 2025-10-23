@@ -68,6 +68,48 @@ class Graph{
         }
         return null
     }
+    Cycle(graph){
+        let visiting = new Set()
+        let visited = new Set()
+        function DFS(node){
+            if(visiting.has(node)){
+                return true
+            }
+            if(visited.has(node)){
+                return false
+            }
+            visiting.add(node)
+            for(let n of graph.get(node)){
+                if(DFS(n)){
+                    return true
+                }
+            }
+            visiting.delete(node)
+            visited.add(node)
+            return false
+        }
+    }
+    degree(v){
+        if(!this.graph[v])return 0
+        return this.graph[v].length
+    }
+    deleteEdge(v,w){
+        if(this.graph[v]){
+            this.graph[v]=this.graph[v].filter(n=>n!==w)
+        }
+        if(this.graph[w]){
+            this.graph[w]=this.graph[w].filter(n=>n!==v)
+        }
+    }
+    deleteVertex(v){
+        if(!this.graph[v]){
+            return
+        }
+        for(let n of this.graph[v]){
+            this.graph[n]=this.graph[n].filter(n=>n!==v)
+        }
+        delete this.graph[v]
+    }
 }
 
 let g=new Graph()

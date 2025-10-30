@@ -51,7 +51,7 @@ class BST{
 }
 function isBst(node,min=-Infinity,max=Infinity){
     if(node===null){
-        return true
+         return true
     }
     if(node.value<=min||node.value>=max){
         return false

@@ -21,8 +21,9 @@ class Stack {
     return this.items[this.items.length-1]
   }
   contains(val){
-    for(let i=0;i<this.items.length;i++){
-        if(this.items[i]===val){
+    let top=this.peek()
+    for(let i=0;i<top;i++){
+        if(top.val===val){
             return true
         }
     }
@@ -33,8 +34,8 @@ class Stack {
 let s=new Stack()
 let i=0
 while(i<5){
-    s.push(i+i)
+    stack.push(i+i)
     i++
 }
-console.log(s.contains(2));
+console.log(s.contains(5));
 

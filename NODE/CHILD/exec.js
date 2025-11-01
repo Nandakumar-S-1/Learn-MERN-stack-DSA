@@ -25,3 +25,11 @@ exec('ls -lh',(err,stdout,stderr)=>{
 
 //if the output is huge we wont ba able to use it, because we wont be able to print it all in the console 
 //means it has a buffer size, if the directory has lot of isze its max sizew will exceed
+
+
+///////////////////////////////////////////////////
+exec('dir', (err, stdout, stderr) => {
+  if (err) return console.error('Command failed:', err);
+  if (stderr) return console.error('stderr:', stderr);
+  console.log('Output:\n', stdout);
+});

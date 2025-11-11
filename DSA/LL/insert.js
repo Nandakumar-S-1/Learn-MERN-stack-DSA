@@ -31,7 +31,7 @@ class LL{
             while(curr.next){
                 curr=curr.next
             }
-            prev.next=node
+            curr.next=node
         }
         this.size++
     }

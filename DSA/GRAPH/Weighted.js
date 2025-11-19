@@ -48,4 +48,4 @@ wg.addE("B", "D", 1)
 wg.addE("C", "D", 3)
 
 console.log("Graph:", wg.graph)
-console.log("BFS from A:", wg.bfs("A"))
+console.log("BFS from A:", wg.bfs("A")) 

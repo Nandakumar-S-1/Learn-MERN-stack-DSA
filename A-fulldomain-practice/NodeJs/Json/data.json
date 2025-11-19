@@ -1,0 +1,8 @@
+{
+    "name":"nandu",
+    "age":25,
+    "address":{
+        "city":"alappuzha",
+        "district":"kerala"
+    }
+}

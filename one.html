@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clickjacking Demo</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        opacity: 0.7;
+        z-index: 1;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+    <script>
+      document.addEventListener("click", function (event) {
+        console.log("Clicked element:", event.target);
+      });
+      document.addEventListener("keydown", function (event) {
+        console.log("Key pressed:", event.key);
+      });
+    </script>
+  </head>
+  <body>
+    <iframe src="https://example.com/"></iframe>
+    <div class="overlay"></div>
+  </body>
+</html>

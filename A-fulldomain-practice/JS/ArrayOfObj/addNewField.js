@@ -8,5 +8,14 @@ const students = [
   { name: "Arun", marks: 80, class: 'C' }
 ];
 
-let res={}
+let g=[]
+for(let i of students){
+    let grade = ''
 
+    if(i.marks>=90) grade = 'A'
+    else if(i.marks >=80) grade = 'B'
+    else grade='C'
+
+    g.push({...i,grade})
+}
+console.log(g)

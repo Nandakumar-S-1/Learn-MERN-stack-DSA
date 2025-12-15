@@ -7,6 +7,24 @@ const students = [
   { name: "Kiran", marks: 95, class: 'A' },
   { name: "Arun", marks: 80, class: 'C' }
 ];
+let n = 3
+let arr=[...students]
+    let res=[]
+for(let i=0;i<n;i++){
+    let max=0
+    for(let j=1;j<arr.length;j++){
+        if(arr[max].marks<arr[j].marks){
+            max=j
+        }
+    }
+res.push(arr[max])
+arr.splice(max,1)
+}
 
-let res={}
+console.log(res)
+
+
+
+
+
 

@@ -8,5 +8,17 @@ const students = [
   { name: "Arun", marks: 80, class: 'C' }
 ];
 
-let res={}
+let groups={}
+for(let i of students){
+    let cls=i.class 
+    if(!groups[cls]){
+        groups[cls]=[]
+    }
+    groups[cls].push(i)
+}
+console.log(groups)
+
+
+
+
 

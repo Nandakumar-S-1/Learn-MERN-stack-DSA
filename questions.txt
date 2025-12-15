@@ -1,0 +1,182 @@
+# Nested  JS Questions
+
+1. // let arr = [
+//   [1, 2, 3, 4],
+//   [1, 2, 3, 4],
+//   [1, 2, 3, 4],
+//   [1, 2, 3, 4]
+// ]
+    
+    // // // find sum of diagonals in single loop
+    // // let sum = 0
+    // //  for(let i=0; i<arr.length ; i++){
+    // //      sum += arr[i][i]
+    // //  }
+    // // console.log(sum)
+    
+2. // // find sum of stairs
+// let sum = 0
+// for(let i=0; i< arr.length; i++){
+//     for(let j=i; j<i+2 && j<arr[i].length; j++){
+//         console.log(arr[i][j])
+//         sum+=arr[i][j]
+//     }
+// }
+// console.log(sum)
+3. // const students = [
+//   { name: "Amit", marks: 78 },
+//   { name: "Riya", marks: 92 },
+//   { name: "Sam", marks: 85 },
+//   { name: "Neha", marks: 70 },
+//   { name: "John", marks: 88 },
+//   { name: "Kiran", marks: 95 },
+//   { name: "Arun", marks: 80 }
+// ];
+// let n = 3
+    
+    // let start =( students.length-n)/2
+    // let data = students.slice(start, start+n)
+    // let mark= data.reduce((acc, s)=> acc += s.marks, 0)
+    // console.log(mark)
+    
+    // let arr = []
+    // for(let val of students){
+    //     arr.push(val.marks)
+    // }
+    // let start = (arr.length-n)/2
+    // let stop = arr.length -n
+    // let sum= 0
+    // for(let i=start; i<=stop; i++){
+    //     sum += arr[i]
+    // }
+    // console.log(sum)
+    
+    // for(val of students){
+    //         let mark = val.marks
+    //         let sum = 0;
+    //         let max = 0;
+    //         for(let key in mark){
+    //             sum+= mark[key]
+    //             console.log(mark[key])
+    //         }
+    //         console.log(sum)
+    // }
+    
+4. // const students = [
+//   {
+//     name: "Aarav",
+//     rollNo: 1,
+//     marks: {
+//       math: 85,
+//       science: 90,
+//       english: 78,
+//       history: 88
+//     }
+//   },
+//   {
+//     name: "Diya",
+//     rollNo: 2,
+//     marks: {
+//       math: 92,
+//       science: 95,
+//       english: 89,
+//       history: 94
+//     }
+//   },
+//   {
+//     name: "Rohan",
+//     rollNo: 3,
+//     marks: {
+//       math: 70,
+//       science: 65,
+//       english: 72,
+//       history: 68
+//     }
+//   },
+//   {
+//     name: "Meera",
+//     rollNo: 4,
+//     marks: {
+//       math: 88,
+//       science: 84,
+//       english: 91,
+//       history: 86
+//     }
+//   }
+// ];
+    
+    //         let max = 0;
+    //         let name = ''
+    // for(val of students){
+    //         let mark = val.marks
+    //         let sum = 0;
+    
+    //         for(let key in mark){
+    //             sum+= mark[key]
+    //         }
+    //         if(sum > max){
+    //             max  = sum
+    //           name = [val.name](http://val.name/)
+    //         }
+    // }
+    //         console.log(name)
+    
+5. // const ab = [
+//   [3, 34, 12, 12312],
+//   [3, 12, 13, 12, 121],
+//   [1, 23, 1231],
+//   [12, 12, 13, 123121, 212, 121, 31, 231, 11]
+// ];
+// // [
+// //   { "elements": [3], "sum": 3 },
+// //   { "elements": [3, 12], "sum": 15 },
+// //   { "elements": [1, 23, 1231], "sum": 1255 },
+// //   { "elements": [12, 12, 13, 123121], "sum": 123158 }
+// // ]
+    
+    // let arr = []
+    // for(let i=0; i<ab.length; i++){
+    //     let obj = {
+    //         "elements" : [],
+    //         "sum" : 0
+    //     }
+    //     for(let j=0; j<=i; j++){
+    //         obj.elements.push(ab[i][j])
+    //         obj.sum+= ab[i][j]
+    //     }
+    //     arr.push(obj)
+    
+    // }
+    // console.log(arr)
+    
+6. // //sum and avg of each student
+// let students = [
+//   {
+//     name: "Alice",
+//     scores: { math: 80, english: 70, science: 90 }
+//   },
+//   {
+//     name: "Bob",
+//     scores: { math: 60, english: 75, science: 85 }
+//   },
+//   {
+//     name: "Charlie",
+//     scores: { math: 90, english: 85, science: 95 }
+//   }
+// ];
+    
+    // for(let val of students){
+    //     let sum = 0;
+    //     let count = 0;
+    //     let avg = 0
+    //     let marks = val.scores
+    //     for(let key in marks){
+    //         sum += marks[key]
+    //         count++;
+    //     }
+    //     avg = sum/count
+    //     console.log(${val.name} : sum: ${sum}, avg : ${avg} )
+    // }
+    
+
+7.//  Fins the oldest person and returnn his name from a array of object

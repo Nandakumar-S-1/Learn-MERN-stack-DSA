@@ -8,5 +8,22 @@ const students = [
   { name: "Arun", marks: 80, class: 'C' }
 ];
 
-let res={}
 
+
+let fst= -Infinity
+let sec= -Infinity
+let s=null
+let f=null
+
+for(let i of students){
+    if(i.marks >fst){
+        sec=fst
+        s=f
+        fst=i.marks
+        f=i
+    }else if(i.marks>sec && i.marks<fst){
+        sec=i.marks
+        s=i
+    }
+}
+console.log(s)

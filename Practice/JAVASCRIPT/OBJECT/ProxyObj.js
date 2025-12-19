@@ -18,4 +18,4 @@ console.log(user.name)
 // console.log(proxyU.name);
 // proxyU.name='ashika'
 
-// console.log(proxyU.name);
+// console.log(proxyU.name); 

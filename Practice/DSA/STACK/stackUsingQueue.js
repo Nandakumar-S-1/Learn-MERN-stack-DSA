@@ -26,12 +26,12 @@ class Stack{
         this.q2=new Queue()
     }
     push(val){
-        if(!this.q1.isEmpty()){
+        while(!this.q1.isEmpty()){
             this.q2.enqueue(this.q1.dequeue())
         }
         this.q1.enqueue(val)
         
-        if(!this.q2.isEmpty()){
+        while(!this.q2.isEmpty()){
             this.q1.enqueue(this.q2.dequeue())
         }
     }

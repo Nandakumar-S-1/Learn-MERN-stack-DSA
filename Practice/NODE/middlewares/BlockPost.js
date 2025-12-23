@@ -1,6 +1,16 @@
-const BlockPost = (req,res,next)=>{
+
+const express=require('express')
+const app=express()
+
+
+app.use((req,res,next)=>{
     if(req.method==='POST'){
-        return res.status(403).send('post requests are not allowed  ')
+        res.send('get requests are not allowed')
     }
     next()
-}
+})
+app.get('/',(req,res)=>{
+    res.send('hello')
+})
+
+app.listen(3000)

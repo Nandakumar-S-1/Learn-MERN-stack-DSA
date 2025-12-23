@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cron": "^4.4.0",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
     "express-session": "^1.18.2",

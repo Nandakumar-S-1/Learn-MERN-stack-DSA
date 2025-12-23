@@ -21,9 +21,9 @@ class Stack {
     return this.items[this.items.length-1]
   }
   contains(val){
-    let top=this.peek()
-    for(let i=0;i<top;i++){
-        if(top.val===val){
+    for(let i =0;i<this.items.length;i++){
+        let it=this.items[i]
+        if(it===val){
             return true
         }
     }

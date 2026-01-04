@@ -1,9 +1,9 @@
-// async function fetchData() {
-//     let p=new Promise((resolve,reject)=>{
-//         setTimeout(()=>{
-//             resolve('data received ')
-//         },1000)
-//     })
-//     let res=await p
-
-// }
+async function Fetch() {
+    let p = new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve('data reseived')
+        },2000)
+    })
+    return await p
+}
+Fetch().then(d=>console.log(d))

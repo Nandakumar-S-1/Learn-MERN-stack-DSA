@@ -9,4 +9,4 @@ app.get('/sum/:num1',(req,res)=>{
   res.send('sum of 2 numbers is :',sum)
 })
 
-app.listen(3000)
+app.listen(4000)

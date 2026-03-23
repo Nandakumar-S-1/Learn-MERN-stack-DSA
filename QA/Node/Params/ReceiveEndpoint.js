@@ -13,12 +13,14 @@ app.get('/avg',(req,res)=>{
     const name=req.query.title
 
     const filterd =  movies.filter(n=>n.title===name)
-    if(filterd.length===0)return res.send('movie with given title not found')
+    if(filterd.length===0){
+      return res.send('movie with given title not found')
+    }
     let totalRating =  filterd.reduce((ac,c)=>ac+c.rating,0)
     let avg= totalRating/filterd.length
 
     res.json({movie:name,averageRating:avg})
-    })
+  })
 
     app.listen(3000)
 

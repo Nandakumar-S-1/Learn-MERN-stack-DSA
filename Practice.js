@@ -1,12 +1,70 @@
-const express = require('express')
-const app=express()
+// let arr=[2,5,1,8,'a',null,6,-4,undefined,8,-1]
 
-app.get('/sum/:num1',(req,res)=>{
-  let num1=parseInt(req.params.num1)
-  let num2=parseInt(req.query.num2)
+// let l=0
+// let r=arr.length-1
+// while(l<r){
+//     let temp=arr[l]
+//     arr[l]=arr[r]
+//     arr[r]=temp
+//     l++
+//     r--
+// }
+// console.log(arr)
 
-  let sum=num1+num2
-  res.send('sum of 2 numbers is :',sum)
-})
+/////////////////////////////////
+// let arr=[1,3,[5,6]]
+// let [a,b,c]=arr
 
-app.listen(4000)
+// console.log(arr,a,b,c)
+
+
+//////////////////////////////////
+
+// const express = require('express')
+// const app=express()
+
+// app.get('/',(req,res)=>{
+//     res.send('home page')
+// })
+
+// app.use((req,res)=>{
+//     res.send('404 page not found')
+// })
+// app.listen(3000)
+
+///////////////////////////////////
+// const http=require('http')
+// const server = http.createServer((req,res)=>{
+//     res.write('hello')
+//     res.end()
+// })
+
+// server.listen(3000)
+
+
+////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

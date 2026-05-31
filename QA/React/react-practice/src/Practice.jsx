@@ -1,3 +1,35 @@
+import React from 'react'
+
+function Practice() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Practice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from 'react'
 // import { useEffect } from 'react'
 // import { useState } from 'react'
@@ -46,7 +78,43 @@
 // export default Practice
 
 
-////////////////////////////////////////////////
+// ////////////////////////////////////////////////
+// import React, { useContext } from 'react'
+// import { CounterContext } from './js'
+
+// function Practice() {
+//   const {num}=useContext(CounterContext)
+//   return (
+//     <div>
+//       <h4>child 2</h4>
+//       <h2>{num}</h2>
+//     </div>
+//   )
+// }
+
+// export default Practice
+
+//////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
